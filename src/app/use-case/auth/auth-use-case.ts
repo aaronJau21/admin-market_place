@@ -18,6 +18,7 @@ export class AuthUseCase {
     onSuccess: (res) => {
       localStorage.setItem('token', res.token);
       localStorage.setItem('user', JSON.stringify(res.user));
+      localStorage.setItem('expires_in', res.expires_in.toString());
       this.router.navigateByUrl('/dashboard');
     },
     onError: (err) => {
