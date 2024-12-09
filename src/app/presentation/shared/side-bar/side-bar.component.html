@@ -14,10 +14,7 @@
               href="#"
               class="relative flex items-center space-x-4 bg-gradient-to-r from-sky-600 to-cyan-400 px-4 py-3 text-white"
             >
-              <span
-                class="-ml-1 h-6 w-6"
-                [innerHTML]="route.data!['data']"
-              ></span>
+              <span class="-ml-1 h-6 w-6" [class]="route.data?.['icon']"></span>
               <span class="-mr-1 font-medium">{{ route.title }}</span>
             </a>
           </li>
